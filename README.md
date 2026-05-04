@@ -43,4 +43,4 @@ Using g++ (Linux / macOS / WSL / MinGW):
 - C++17 or newer compiler (g++, clang, or MSVC)
 
 ## Course Concepts Demonstrated
-Chapters 11-18 of [Textbook Title] plus four UX enhancement sprints (Labs 19-22).
+Chapters 11-18 of Fundamentals of Programing (2018 edition) plus four UX enhancement sprints (Labs 19-22).

@@ -279,9 +279,18 @@ void editItem(vector<unique_ptr<GradedItem>>& items) {
     cout << "1. Edit Name\n";
     cout << "2. Edit Points Earned\n";
     cout << "3. Edit Points Possible\n";
-    cout << "Choose option to edit: ";
     int choice;
+    while (true){
+    cout << "Choose option to edit: ";
     cin >> choice;
+    if (std::cin.fail() || category < 1 || category > 3) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Invalid input. Please enter 1, 2, or 3 only.\n";
+        } else {
+            break;
+        }
+    }
     
     switch (choice) {
         case 1: {
@@ -294,20 +303,36 @@ void editItem(vector<unique_ptr<GradedItem>>& items) {
             break;
         }
         case 2: {
-            cout << "Enter new points earned: ";
             float newPointsEarned;
+            while (true){
+            cout << "Enter new points earned: ";
             cin >> newPointsEarned;
-            // Assume a setter or modifying the variable directly
-            items[index - 1]->setPointsEarned(newPointsEarned);
-            break;
+            if (std::cin.fail()) {
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    std::cout << "Invalid input. Please enter numbers only.\n";
+                } else {
+                // Assume a setter or modifying the variable directly
+                items[index - 1]->setPointsEarned(newPointsEarned);
+                break;
+                }
+            }
         }
         case 3: {
-            cout << "Enter new points possible: ";
             float newPointsPossible;
+            while (true){
+            cout << "Enter new points possible: ";
             cin >> newPointsPossible;
-            // Assume a setter or modifying the variable directly
-            items[index - 1]->setPointsPossible(newPointsPossible);
-            break;
+            if (std::cin.fail()) {
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    std::cout << "Invalid input. Please enter numbers only.\n";
+                } else {
+                // Assume a setter or modifying the variable directly
+                items[index - 1]->setPointsEarned(newPointsEarned);
+                break;
+                }
+            }
         }
         default:
             cout << "Invalid option.\n";

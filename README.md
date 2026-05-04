@@ -1,40 +1,46 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=23474421&assignment_repo_type=AssignmentRepo)
-# 1437 Ch. 19 - App Enhancements 1
+# Grade Calculator (OOP Edition)
 
-## Setup
+A C++ console application that tracks graded items (homework, quizzes, exams),
+calculates points-based and weighted final grades, and persists data between sessions.
+Built around an inheritance hierarchy with a menu-driven interface.
 
-```bash
-# Clone this repository
-git clone <your-repo-url>
-cd <repo-name>
-```
+## Author
+Kenzo Schleiniger - COSC 1437, Spring 2026
 
-## Running the Code
+## Description
+[2-3 sentences describing what the program does and who it's for.]
 
-```bash
-./main
-```
+## Features
+- Menu-driven interface (add / view / remove / calculate / exit)
+- Three graded-item categories: Homework, Quiz, Exam
+- Custom grading scheme: category weights + letter-grade cutoffs
+- Two grade modes: points-based and weighted
+- Save and load grades to/from a text file
+- Code that rejects invalid inputs
+- An edit function, just in case you make a mistake or want to change an assignment without deleting it
+- ASNI Color Code for letter grades
 
-## Compiling
+## Files
+| File         | Purpose                                          |
+|--------------|--------------------------------------------------|
+| main.cpp     | Driver program: menu loop and orchestration     |
+| GradedItem.h | Base class for all graded items                 |
+| Homework.h   | Derived class - homework items                  |
+| Quiz.h       | Derived class - quiz items                      |
+| Exam.h       | Derived class - exam items                      |
+| USER_GUIDE.md| End-user instructions                           |
 
-```bash
-g++ -std=c++17 -o main *.cpp
-```
+## How to Build
+Using g++ (Linux / macOS / WSL / MinGW):
 
-## Testing
+    g++ -std=c++17 *.cpp -o GradeCalculator
 
-Tests are automatically run via GitHub Actions on every push.
+## How to Run
+    ./GradeCalculator        # macOS / Linux
+    GradeCalculator.exe      # Windows
 
-To run tests locally:
-```bash
-# See .github/workflows/classroom.yml for test commands
-```
+## Requirements
+- C++17 or newer compiler (g++, clang, or MSVC)
 
-## Autograding
-
-This assignment uses GitHub Classroom autograding. Your score is calculated based on:
-- Code compilation (if applicable)
-- Test results
-- Code quality
-
-See `.github/classroom/autograding.json` for the full grading rubric.
+## Course Concepts Demonstrated
+Chapters 11-18 of [Textbook Title] plus four UX enhancement sprints (Labs 19-22).

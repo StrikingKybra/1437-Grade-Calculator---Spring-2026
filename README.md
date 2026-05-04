@@ -1,14 +1,14 @@
 # Grade Calculator (OOP Edition)
 
-A C++ console application that tracks graded items (homework, quizzes, exams),
-calculates points-based and weighted final grades, and persists data between sessions.
-Built around an inheritance hierarchy with a menu-driven interface.
+A C++ console application that tracks graded items (homework, quizzes, exams) and
+calculates points-based and weighted final grades, and persists data between sessions,
+built around an inheritance hierarchy with a menu-driven interface.
 
 ## Author
 Kenzo Schleiniger - COSC 1437, Spring 2026
 
 ## Description
-[2-3 sentences describing what the program does and who it's for.]
+This program utilizes user-inputed assignments that are stored in a vector to calculate their grade using a points-based or weighted grading scheme. It is intended to be used by students looking to figure out their grade quickly.
 
 ## Features
 - Menu-driven interface (add / view / remove / calculate / exit)
